@@ -51,6 +51,24 @@ button {
   color: white;
   font-size: 2rem;
   cursor: pointer;
+  transition: background 0.5s ease-in-out;
+  animation: buttonAnimation 2s 5 2s;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    background: lightblue;
+  }
+  25% {
+    background: rgb(35, 98, 119);
+  }
+  100% {
+    background: rgb(99, 98, 119);
+  }
+}
+
+button:hover {
+  background: #563808;
 }
 
 /* Nav Section with HERO */
@@ -103,6 +121,86 @@ nav ul {
   padding: 5rem;
 }
 
+/* Locations Section */
+
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/new-york-page.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+  padding: 1rem 0rem;
+}
+
+.locations-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  pointer-events: none;
+}
+
+.moving-cloud-1 {
+  animation: cloudAnimation 3.1s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+.moving-cloud-2 {
+  top: 15%;
+  z-index: -2;
+  opacity: 0.4;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Benifits Section */
+
+.benifits-head {
+  background: #343c44;
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.benifits-head h3 {
+  padding: 1rem;
+}
+
+/* Media Query */
+
 @media screen and (max-width: 932px) {
   html {
     font-size: 45%;
@@ -112,5 +210,20 @@ nav ul {
   }
   #logo {
     padding: 2rem;
+  }
+  .cloud {
+    height: 40rem;
+  }
+  .moving-cloud-1 {
+    z-index: -1;
+  }
+  .moving-cloud-2 {
+    z-index: -2;
+  }
+  .locations-head h3 {
+    padding: 5rem;
+    background: rgba(19, 28, 39, 0.8);
+    -webkit-text-fill-color: white;
+    text-align: center;
   }
 }
