@@ -291,6 +291,11 @@ footer ul {
   align-items: center;
 }
 
+button:focus {
+  background: #2c3f57;
+  outline-style: solid;
+}
+
 /* Media Query */
 
 @media screen and (max-width: 932px) {
