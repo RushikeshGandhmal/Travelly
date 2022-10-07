@@ -49,24 +49,10 @@ button {
   background: #4c6e97;
   border: none;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
   transition: background 0.5s ease-in-out;
-  animation: buttonAnimation 2s 1 2s;
 }
-
-@keyframes buttonAnimation {
-  0% {
-    background: lightblue;
-  }
-  25% {
-    background: rgb(35, 98, 119);
-  }
-  100% {
-    background: rgb(99, 98, 119);
-  }
-}
-
 button:hover {
   background: #563808;
 }
@@ -76,6 +62,9 @@ button:hover {
 .main-head {
   background: #131c27;
   color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
 }
 
 nav {
@@ -104,7 +93,7 @@ nav ul {
 
 .hero {
   min-height: 90vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
     url("./img/landing-page.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -141,9 +130,9 @@ nav ul {
 }
 
 .locations-head h2 {
+  padding: 1rem 0rem;
   text-decoration: underline;
   text-decoration-thickness: 0.5rem;
-  padding: 1rem 0rem;
 }
 
 .locations-head h3 {
@@ -183,7 +172,7 @@ nav ul {
 
 /* Benifits Section */
 
-.benifits-head {
+.benefits-head {
   background: #343c44;
   padding: 3rem;
   min-height: 30vh;
@@ -195,7 +184,7 @@ nav ul {
   text-align: center;
 }
 
-.benifits-head h3 {
+.benefits-head h3 {
   padding: 1rem;
 }
 
@@ -245,7 +234,7 @@ p {
 
 .form-wrapper {
   background: rgba(19, 28, 39, 0.8);
-  width: 60%;
+  width: 50%;
   color: white;
   border-radius: 20px;
 }
@@ -256,8 +245,9 @@ p {
 }
 
 .name-form,
-.email-form {
-  padding: 3rem;
+.email-form,
+.message-form {
+  padding: 4rem;
   text-align: center;
 }
 
